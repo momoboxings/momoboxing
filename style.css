@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0f2c; /* Bleu nuit */
+    color: #f0f0f0; /* Blanc cassé pour le texte */
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #ff4e50, #ff8a65); /* Dégradé de rouge clair */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: #141b3a; /* Bleu nuit foncé */
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ff8a65; /* Rouge clair */
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ff8a65;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover {
+    color: #ff4e50; /* Rouge plus clair */
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel img {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.section {
+    padding: 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    background: linear-gradient(to right, #ff4e50, #ff8a65); /* Dégradé de rouge clair */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-content {
+    background-color: #141b3a; /* Bleu nuit foncé */
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.form-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.form-page {
+    display: none;
+    margin: 1rem 0;
+    padding: 2rem;
+    border: 1px solid #ff8a65;
+    border-radius: 10px;
+}
+
+.form-page.active {
+    display: block;
+}
+
+button[type="button"], button[type="submit"] {
+    background-color: #ff4e50; /* Rouge clair */
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #ff8a65;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #141b3a; /* Bleu nuit foncé */
+}
